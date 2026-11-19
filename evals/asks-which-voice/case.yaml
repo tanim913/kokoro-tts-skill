@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: asks-which-voice
+expected_outcome: |
+  With no voice named, the skill asks the user to choose a Kokoro voice (offering af_heart + bm_george as recommended and an audition) before building the cell.

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: narrate-short-sample-zip
+expected_outcome: |
+  Two MP3s (af_heart and bm_george) of the ~200-word sample arrive in the run folder's audio/ after one Colab run driven through Chrome, the cell is cleared, the tab closed, and the user is told the notebook held the sample text.
+context:
+  scaffold_script: place-files.sh

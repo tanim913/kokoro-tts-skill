@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: markdown-folder-cells
+expected_outcome: |
+  build_cell.py runs on the folder with --voices bm_george and --delivery drive, producing cells under the size limit whose cleaned text has no markdown symbols, and nothing is opened in the browser.
+context:
+  scaffold_script: place-files.sh

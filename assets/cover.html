@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>kokoro-tts cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Nanum+Pen+Script&display=block" rel="stylesheet">
+<style>
+  :root {
+    --stock: #c8daf1;        /* blue revision page */
+    --ink: #17191e;          /* typewriter ribbon */
+    --ink-soft: #2c3a52;     /* worn ribbon, tinted from the stock */
+    --pencil: #c4261c;       /* red grease pencil */
+    --hole: #1d2230;
+    --type: "Courier Prime", "Courier New", monospace;
+    --hand: "Nanum Pen Script", cursive;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; background: var(--stock); }
+  ::selection { background: var(--pencil); color: var(--stock); }
+
+  .page {
+    position: relative; width: 1280px; height: 640px;
+    background: var(--stock); color: var(--ink);
+    font-family: var(--type); font-size: 24px; line-height: 1.34;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* three punched holes on the binding edge */
+  .hole { position: absolute; left: 34px; width: 22px; height: 22px; border-radius: 50%;
+          background: var(--hole); box-shadow: inset 0 2px 3px rgba(0,0,0,.6); }
+  .hole.h1 { top: 96px; } .hole.h2 { top: 309px; } .hole.h3 { top: 522px; }
+
+  .running { position: absolute; top: 34px; right: 64px; font-size: 17px; letter-spacing: .04em;
+             color: var(--ink-soft); text-transform: uppercase; word-spacing: .3em; }
+
+  h1 { position: absolute; top: 58px; left: 110px; font-size: 96px; line-height: 1; font-weight: 700; letter-spacing: -.02em; }
+  /* a typewriter double underline: two struck runs of underscores, half a line apart */
+  .underline { position: absolute; left: 110px; top: 128px; font-size: 24px; line-height: 12px; letter-spacing: -.02em;
+               color: var(--ink); white-space: pre; }
+  .sub { position: absolute; top: 172px; left: 112px; font-size: 22px; color: var(--ink-soft); }
+
+  .hand { font-family: var(--hand); color: var(--pencil); line-height: .9; }
+  .marks { position: absolute; inset: 0; width: 1280px; height: 640px; pointer-events: none; overflow: visible; }
+  .marks path { fill: none; stroke: var(--pencil); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+
+  .cast { position: absolute; top: 84px; left: 868px; width: 300px; font-size: 46px; text-align: center; transform: rotate(-4deg); }
+
+  .script { position: absolute; top: 242px; left: 112px; width: 860px; }
+  .line { display: grid; grid-template-columns: 44px 214px 600px; align-items: start; }
+  .n { color: var(--ink-soft); }
+  .who { text-transform: uppercase; letter-spacing: .02em; }
+  .who small { display: block; font-size: 15px; letter-spacing: .06em; color: var(--ink-soft); margin-top: 2px; text-transform: lowercase; }
+  .say { text-wrap: balance; }
+  .gap { height: 30px; }
+  .stars { height: 52px; display: grid; place-items: center; padding-left: 258px; letter-spacing: .5em; }
+
+  .revmark { position: absolute; left: 1188px; top: 336px; font-size: 26px; font-weight: 700; }
+  .cue { position: absolute; font-size: 40px; white-space: nowrap; transform: rotate(-3deg); }
+  .cue.pause { left: 1020px; top: 286px; }
+  .cue.hold  { left: 1020px; top: 400px; }
+  .timing { position: absolute; left: 820px; top: 502px; font-size: 34px; white-space: nowrap; transform: rotate(-2deg); }
+  .alt { position: absolute; left: 160px; top: 300px; font-size: 27px; white-space: nowrap; transform: rotate(-3deg); }
+
+  .install { position: absolute; left: 112px; right: 64px; bottom: 36px; font-size: 20px;
+             display: flex; gap: 18px; align-items: baseline; }
+  .install b { letter-spacing: .04em; text-decoration: underline; text-underline-offset: 4px; }
+  .install code { font-family: var(--type); }
+</style>
+</head>
+<body>
+<main class="page">
+  <span class="hole h1"></span><span class="hole h2"></span><span class="hole h3"></span>
+
+  <div class="running">Revised (blue) &nbsp; 11/19/26 &nbsp; &nbsp; 1.</div>
+
+  <h1>kokoro-tts</h1>
+  <div class="underline" aria-hidden="true">________________________________________
+________________________________________</div>
+  <p class="sub">a skill for Claude Code</p>
+
+  <p class="cast hand">54 voices,<br>9 languages</p>
+
+  <section class="script">
+    <div class="line">
+      <span class="n">1</span>
+      <span class="who">Narrator<small>af_heart</small></span>
+      <p class="say">Give me your text: a chapter, an article, a folder of notes.</p>
+    </div>
+    <div class="gap"></div>
+    <div class="line">
+      <span class="n">2</span>
+      <span class="who">Narrator<small>af_heart</small></span>
+      <p class="say">I read it aloud in natural Kokoro voices, on a free Colab GPU.</p>
+    </div>
+    <div class="stars">* * *</div>
+    <div class="line">
+      <span class="n">3</span>
+      <span class="who">Narrator<small>af_heart</small></span>
+      <p class="say">Your computer does no work. The MP3s come back to you.</p>
+    </div>
+  </section>
+
+  <span class="revmark">*</span>
+  <p class="cue pause hand">pause 0.45 s</p>
+  <p class="cue hold hand">hold 1.6 s, scene</p>
+  <p class="timing hand">1:10 of audio read in 6 s, warm T4</p>
+  <p class="alt hand">or bm_george</p>
+
+  <svg class="marks" viewBox="0 0 1280 640" aria-hidden="true">
+    <!-- ring round the cast note -->
+    <path d="M1064 70 C 1150 70, 1186 104, 1166 142 C 1146 180, 1040 194, 966 186 C 892 178, 860 144, 876 112 C 892 80, 956 64, 1030 66 C 1068 67, 1100 74, 1122 84"/>
+    <!-- pause: caret in the gap between speeches 1 and 2, leader out to the cue -->
+    <path d="M372 322 L 380 310 L 388 322"/>
+    <path d="M394 314 C 600 318, 860 314, 1012 304"/>
+    <!-- scene hold: leader from the cue back to the stars -->
+    <path d="M1014 420 C 960 424, 860 426, 800 427"/>
+    <path d="M812 419 L 798 427 L 812 435"/>
+  </svg>
+
+  <p class="install"><b>INSTALL:</b><code>git clone https://github.com/tanim913/kokoro-tts-skill ~/.claude/skills/kokoro-tts</code></p>
+</main>
+</body>
+</html>

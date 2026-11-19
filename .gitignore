@@ -1,0 +1,6 @@
+# Your own project adapters stay on your machine
+references/local/
+# claude plugin eval output
+evals/results/
+__pycache__/
+*.pyc
